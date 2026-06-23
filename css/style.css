@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background: #fff;
+}
+.top{
+   background-color: #fff;
+   width: 100%; 
+   padding: 20px 0px;
+   box-shadow: 1px 1px 10px #000;
+}
+.container{
+    margin: 0px 80px;
+}
+.top .element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top .element .logo{
+    width: 200px;
+    height: auto;
+}
+.top .element .logo img{
+    width: inherit;
+    height: inherit;
+}
+.top .element .nav ul{
+    list-style: none;
+    display: flex;
+}
+.top .element .nav ul li{
+    margin-right: 30px;
+}
+.top .element .nav ul li a{
+    color: #4b5563;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.top .element .nav ul li a:hover{
+    color: #111827;
+}
+.but a{
+text-decoration: none;
+text-transform: capitalize;
+color: #fff;
+background-color: #a87a2a;
+padding: 10px 20px;
+border-radius: 20px;
+font-weight: bold;
+transition: .3s ease-in;
+}
+.but a:hover{
+    background-color: #8c6124;
+}
+.top .element .but i{
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .3s ease-in;
+}
+.top .element .but i:hover{
+    background-color: #8888887c;
+}
+.bg{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg.jpg);
+    background-size: cover;
+    position: relative;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: #0000;
+    opacity: 0.5;
+}
+.bg .text{
+    position: absolute;
+    top: 100px;
+    color: #ffffffa4;
+    width: 60%;
+}
+.bg .text h1{
+    color: #fff;
+    text-transform: capitalize;
+    /* font-size: 80px; */
+    line-height: 1.2;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+
+}
+.bg .text p{
+    width: 60%;
+    margin: 20px 0px;
+    font-size: 20px;
+    color: #888;
+}
+.bg .text .butt{
+    display: flex;
+    margin-bottom: 30px;
+}
+.bg .text .butt button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    /* font-size: 14px; */
+    border: 0;
+    background-color: #ffffff70;
+    color: #fff;
+    margin-right: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.bg .text .butt #active{
+    background-color: #fff;
+    color: #000;
+}
+.bg .text .butt button:hover{
+    background-color: #ffffff49;
+}
+.bg .text .butt button span{
+    color: #d3d3d3;
+}
+.bg .text .but #light{
+    background-color: #ffffffa4;
+    margin-left: 10px;
+}
+.bg .text .but #light:hover{
+    background-color: #ffffff49;
+}
+/* statistics section */
+.statistics{
+    padding: 20px 0px;
+    width: 100%;
+    border-bottom: 1px solid #4b556334;
+}
+/* .statistics .element{
+    display: flex;
+    justify-content: space-around;
+} */
+.statistics .element .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 4fr));
+}
+.statistics .element .row .card{
+    text-align: center;
+    padding: 10px 60px;
+}
+.statistics .element .row h1{
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.statistics .element .row p{
+    text-transform: uppercase;
+    color: #6b7280;
+}
+.service{
+    width: 100%;
+    padding: 100px 0px;
+}
+.service .header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.service .header span{
+    color: #8c6124;
+    background: #f9edda;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+.service h1{
+    text-transform: capitalize;
+    font-size: 40px;
+    margin: 10px 0px;
+}
+.service p{
+    font-size: 14px;
+    color: #4b5563;
+}
+.service .element .card{
+    border: 1px solid #6b728049;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 80%;
+    transition: .3s ease-in;
+}
+.service .card #icon{
+    padding: 15px;
+    color: #a87a2a;
+    background-color: #f9edda;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: .3s ease-in;
+}
+.service .card h3{
+    text-transform: capitalize;
+    margin: 15px 0px;
+}
+.service.card p{
+    margin-bottom: 15px;
+    color: #4b5563;
+}
+.service .card a{
+    text-decoration: none;
+    color: #a87a2a;
+    font-size: 14px;
+}
+.service .card:hover #icon{
+    background-color: #a87a2a;
+    color: #fff;
+}
+.service .card:hover{
+    box-shadow: 1px 1px 1px #4b5563;
+    border: 1px solid #a87a2a77;
+}
+.service .card:hover a i{
+    margin-left: 5px;
+}
+.service .element{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 3fr));
+}
