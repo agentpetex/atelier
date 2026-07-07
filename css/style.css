@@ -7,10 +7,12 @@ body{
     background: #fff;
 }
 .top{
-   background-color: #fff;
+   background-color: #ffffffc2;
    width: 100%; 
    padding: 20px 0px;
    box-shadow: 1px 1px 10px #000;
+   position: fixed;
+   z-index: 1;
 }
 .container{
     margin: 0px 80px;
@@ -66,6 +68,9 @@ transition: .3s ease-in;
 .top .element .but i:hover{
     background-color: #8888887c;
 }
+.top .element .but #toggle{
+    display: none;
+}
 .bg{
     width: 100%;
     height: 100vh;
@@ -73,7 +78,7 @@ transition: .3s ease-in;
     background-size: cover;
     position: relative;
 }
-.overlay{
+.bg .overlay{
     width: 100%;
     height: 100vh;
     background-color: #0000;
@@ -150,6 +155,7 @@ transition: .3s ease-in;
 .statistics .element .row .card{
     text-align: center;
     padding: 10px 60px;
+    width: 250px;
 }
 .statistics .element .row h1{
     font-size: 45px;
@@ -163,23 +169,26 @@ transition: .3s ease-in;
     width: 100%;
     padding: 100px 0px;
 }
-.service .header{
+.header{
     text-align: center;
+    width: 45%;
+    margin: 0px auto;
     margin-bottom: 50px;
 }
-.service .header span{
+.header span{
     color: #8c6124;
     background: #f9edda;
     padding: 5px 15px;
     border-radius: 20px;
     text-transform: capitalize;
 }
-.service h1{
+.header h1{
     text-transform: capitalize;
-    font-size: 40px;
+    /* font-size: 40px; */
     margin: 10px 0px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
 }
-.service p{
+.header p{
     font-size: 14px;
     color: #4b5563;
 }
@@ -226,4 +235,267 @@ transition: .3s ease-in;
 .service .element{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 3fr));
+}
+.project{
+    width: 100%;
+    background: #f9fafb;
+    padding: 100px 0px;
+}
+.project .element{
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 3fr));
+    gap: 30px;
+}
+.project .element .card{
+    box-sizing: border-box;
+    width: 380px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .2s ease-in;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    /* grid-row: span3; */
+
+}
+.project .element .card3{
+    height: 600px;
+    border-radius: 20px 20px 0px 0px;
+    grid-row: span 3;
+}
+.project .element .card img{
+    width: inherit;
+    height: inherit;
+    border-radius: 20px;
+    transition: .2s ease-in;
+}
+/* .project .element .card .overlay{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: #000;
+    top: 0px;
+    opacity: 0.5;
+    border-radius: 20px;
+    display: none;
+    transition: .2s ease-in;
+} */
+ .project .element .card .overlay{
+    position: absolute;
+    width: inherit;
+    height: 0;
+    background: #000;
+    /* display: block; */
+    top: 0;
+    transform-origin: top;
+    opacity: 0.5;
+    transition: .5s ease-in;
+ }
+.project .element .card .title{
+    margin-top: -100px;
+    padding: 20px;
+    position: absolute;
+    display: none;
+    transition: .2s ease-in;
+}
+.project .element .card .title p{
+    color: #a87a2a;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.project .element .card .title h2{
+    color: #fff;
+    text-transform: capitalize;
+    /* font-size: 20px; */
+}
+.project .element .card:hover img{
+transform: scale(1.1);
+}
+.project .element .card:hover .overlay{
+display: block;
+height: 100%;
+}
+.project .element .card:hover .title{
+display: block;
+}
+.project .but{
+    text-align: center;
+    margin-top: 50px;
+}
+.work{
+    padding: 100px 0px;
+}
+.work .element{
+    justify-content: center;
+    padding: 0px 30px;
+}
+.work .element .card{
+    display: flex;
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+.work .element .rev{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.work .element .card .num{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border-right: 1px solid #a87a2a;
+}
+.work .element .rev .num{
+    border-right: none;
+    border-left: 1px solid #a87a2a;
+}
+.work .element .rev .title{
+    text-align: right;
+}
+.work .element .card .title h1{
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.work .element .card .num .b{
+    background-color: #a87a2a;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px #0000006e;
+    border: 3px solid #fff;
+    color: #fff;
+    position: absolute;
+    margin-left: 50%;
+}
+.work .element .card .title{
+    text-align: left;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.fd {
+    padding: 100px 0px;
+    background-color: #f9fafb;
+    overflow: hidden;
+}
+.fd .element{
+    display: flex;
+    gap: 20px;
+}
+.fd .element .card{
+    box-sizing: border-box;
+    width: 400px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    color: #111827;
+    border: 0.5px solid #1118271c;
+    min-width: 400px;
+}
+.fd .element .card .icon{
+    margin-bottom: 20px;
+}
+.fd .element .card .icon i{
+    color: #a87a2a;
+}
+.fd .element .card .profile h3{
+border-top: 0.2px solid #1118271f;
+margin-top: 30px;
+padding-top: 30px;
+text-transform: capitalize;
+}
+.fd .element .card span{
+    text-transform: capitalize;
+}
+table tr, th, td{
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+th{
+    text-transform: capitalize;
+}
+table{
+    margin-top: 0;
+    border-collapse: collapse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tablet view */
+@media screen and (max-width:1000px) {
+    .container{
+        margin: 0px 40px;
+    }
+  .top .element .nav ul{
+    display: none;
+  }  
+  .top .element .but{
+    display: flex;
+  }
+  .top .element .but #toggle{
+    display: block;
+  }
+  .header{
+    width: 100%;
+  }
+  .statistics .element .row .card h1{
+    font-size: 30px;
+  }
+  .work .element .card{
+    width: 100%;
+  }
+  .work .element .rev{
+    display: flex;
+    flex-direction: row;
+  }
+  .work .element .card .num{
+    width: 20%;
+    border: none;
+    margin-right: 20px;
+  }
+ .work .element .card .num .b{
+    margin-left: 0px;
+ }
+ .work .element .card .title{
+    text-align: left;
+    /* width: 100%; */
+ }
+
+
+
+
+}
+
+
+
+
+
+
+
+/* mobile view */
+@media only screen and (max-width:600px){
+    .container{
+        margin: 0px 5%;
+    }
+    .top .but a{
+        display: none;
+    }
+    .bg .text{
+        width: 80%;
+    }
+
+
 }
